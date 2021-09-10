@@ -1,0 +1,13 @@
+{
+	"IsEncrypted": false,
+	"Values": {
+		"AzureWebJobsStorage": "",
+		"FUNCTIONS_WORKER_RUNTIME": "node",
+		"Azure.StorageKey": "",
+		"Azure.StorageAccountName": "",
+		"Azure.ContainerName": "",
+		"Azure.SpecificationContainerName": "",
+		"EventGrid.Notification.Key": "",
+		"EventGrid.Notification.Endpoint": ""
+	}
+}
