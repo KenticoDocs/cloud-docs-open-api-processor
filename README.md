@@ -1,6 +1,5 @@
-| [master](https://github.com/KenticoDocs/kontent-docs-open-api-processor/tree/master) | [develop](https://github.com/KenticoDocs/kontent-docs-open-api-processor/tree/develop) |
-|:---:|:---:|
-| [![Build Status](https://travis-ci.com/KenticoDocs/kontent-docs-open-api-processor.svg?branch=master)](https://travis-ci.com/KenticoDocs/kontent-docs-open-api-processor/branches) [![codebeat badge](https://codebeat.co/badges/920ab1a9-ce15-41bd-aa7b-3ec575e9fd7b)](https://codebeat.co/projects/github-com-kenticodocs-kontent-docs-open-api-processor-master) | [![Build Status](https://travis-ci.com/KenticoDocs/kontent-docs-open-api-processor.svg?branch=develop)](https://travis-ci.com/KenticoDocs/kontent-docs-open-api-processor/branches) [![codebeat badge](https://codebeat.co/badges/9ac54137-9469-497d-a8dd-3a7ecea2c201)](https://codebeat.co/projects/github-com-kenticodocs-kontent-docs-open-api-processor-develop) |
+![master](https://github.com/KenticoDocs/kontent-docs-open-api-processor/actions/workflows/master_kcd-open-api-processor-live-master.yml/badge.svg)
+![develop](https://github.com/KenticoDocs/kontent-docs-open-api-processor/actions/workflows/develop_kcd-open-api-processor-live-dev.yml/badge.svg)
 
 # Kentico Kontent Documentation - OpenAPI Processor
 
