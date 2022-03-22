@@ -17,23 +17,23 @@ export const prerenderOptions = {
             },
             http: {
                 basic: '#96A236',
-                delete: '#B72929',
-                get: '#36A284',
+                delete: '#C42D61',
+                get: '#44B77A',
                 head: '#231F20',
                 link: '#908E8F',
                 options: '#EBB500',
                 patch: '#F05A22',
-                post: '#8951A5',
-                put: '#4863BE',
+                post: '#8054B4',
+                put: '#1C60BF',
             },
             primary: {
                 main: '#231F20',
             },
             responses: {
                 error: {
-                    backgroundColor: '#f7e9e9',
-                    backgroundColorHover: '#f7e9e9',
-                    color: '#B72929',
+                    backgroundColor: '#C42D61',
+                    backgroundColorHover: '#C42D61',
+                    color: '#ffffff',
                 },
                 info: {
                     color: '#F05A22',
@@ -42,15 +42,15 @@ export const prerenderOptions = {
                     color: '#FBC15E',
                 },
                 success: {
-                    backgroundColor: '#ecf6f2',
-                    backgroundColorHover: '#ecf6f2',
-                    color: '#36A284',
+                    backgroundColor: '#44B77A',
+                    backgroundColorHover: '#44B77A',
+                    color: '#ffffff',
                 },
             },
         },
         menu: {
             arrow: {
-                color: '#F05A22',
+                color: '#41D9C5',
                 size: '1.125em',
             },
             backgroundColor: '#fff',
@@ -66,9 +66,9 @@ export const prerenderOptions = {
             labelsTextSize: '0.875em',
             linesColor: '#bcbbbb',
             nestedBackground: '#f3f3f3',
-            requireLabelColor: '#B72929',
+            requireLabelColor: '#C42D61',
             typeNameColor: '#908E8F',
-            typeTitleColor: '#F49300',
+            typeTitleColor: '#F05A22',
         },
         spacing: {
             unit: 4,
@@ -76,14 +76,14 @@ export const prerenderOptions = {
         typography: {
             code: {
                 backgroundColor: '#f3f6f7',
-                color: '#E73430',
+                color: '#C42D61',
                 fontFamily: 'Inconsolata, monospace',
                 fontSize: '.875em',
             },
             fontFamily: 'GT Walsheim Pro, Helvetica, Arial, sans-serif',
             fontSize: '1em',
             fontWeightBold: 700,
-            fontWeightRegular: 300,
+            fontWeightRegular: 400,
             headings: {
                 fontFamily: 'GT Walsheim Pro, Helvetica, Arial, sans-serif',
                 fontSize: '1.875em',
