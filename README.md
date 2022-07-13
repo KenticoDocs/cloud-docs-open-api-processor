@@ -1,21 +1,21 @@
-![master](https://github.com/KenticoDocs/kontent-docs-open-api-processor/actions/workflows/master_kcd-open-api-processor-live-master.yml/badge.svg)
-![develop](https://github.com/KenticoDocs/kontent-docs-open-api-processor/actions/workflows/develop_kcd-open-api-processor-live-dev.yml/badge.svg)
+![master](https://github.com/Kontent-ai-Learn/kontent-ai-learn-open-api-processor/actions/workflows/master_kcd-open-api-processor-live-master.yml/badge.svg)
+![develop](https://github.com/Kontent-ai-Learn/kontent-ai-learn-open-api-processor/actions/workflows/develop_kcd-open-api-processor-live-dev.yml/badge.svg)
 
-# Kentico Kontent Documentation - OpenAPI Processor
+# Kontent.ai Documentation - OpenAPI Processor
 
-Backend function for Kentico Kontent documentation portal, which utilizes [Kentico Kontent](https://kontent.ai/) as a source of its data.
+Backend function for Kontent.ai Learn that uses [Kontent.ai](https://kontent.ai/) as a source of its data.
 
-This service is responsible for creating HTML documents that represent API reference pages on the [documentation portal](https://docs.kontent.ai/), and passing them forward using [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/).
+This service is responsible for creating HTML documents that represent API reference pages on the [Kontent.ai Learn](https://kontent.ai/learn/), and passing them forward using [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/).
 
-It responds to events triggered by the blob storage, after the [Reference Preprocessor](https://github.com/KenticoDocs/kontent-docs-reference-preprocessor) creates a blob with the preprocessed data. The OpenAPI Processor then processes the data into HTML pages that are then saved in the Blob Storage.
+It responds to events triggered by the blob storage, after the [Reference Preprocessor](https://github.com/Kontent-ai-Learn/kontent-ai-learn-reference-preprocessor) creates a blob with the preprocessed data. The OpenAPI Processor then processes the data into HTML pages that are then saved in the Blob Storage.
 
 ## Overview
 
 1. This project is a TypeScript Azure Functions application.
 2. It is subscribed to an Azure [Event Grid](https://azure.microsoft.com/en-us/services/event-grid/) topic and listens for events. Each event contains information about the content that was changed.
 3. After receiving an event, it fetches the content from the Blob storage.
-4. The fetched content is first procesed into a JSON object, that is supposed to satisfy [OpenAPI Specification 3.0.2](https://github.com/OAI/OpenAPI-Specification) format. The JSON is also validated using the [openapi-schema-validator](https://www.npmjs.com/package/openapi-schema-validator) package.
-5. The created JSON object is then processed by a forked [Redoc package](https://www.npmjs.com/package/kentico-kontent-docs-redoc). Redoc generates an HTML file that represents a single API Reference page.
+4. The fetched content is first processed into a JSON object, that is supposed to satisfy [OpenAPI Specification 3.0.2](https://github.com/OAI/OpenAPI-Specification) format. The JSON is also validated using the [openapi-schema-validator](https://www.npmjs.com/package/openapi-schema-validator) package.
+5. The created JSON object is then processed by a forked [ReDoc package](https://www.npmjs.com/package/kentico-kontent-docs-redoc). ReDoc generates an HTML file that represents a single API Reference page.
 6. Finally, a blob with the generated HTML is stored to an Azure Blob Storage.
 
 ## Setup
@@ -58,7 +58,7 @@ For local testing without EventGrid:
 * In `.\kcd-open-api-processor\index.ts`, change the following:
   * Comment out lines 31 to 33, you don't need them.
   * Change `Configuration.set(isTest)` to `Configuration.set(false)`.
-  * In the input parameters of the getBlobFromStorage function, use your own variable for `url` instead of `event.data.url`. Your URL must lead to an output JSON file from the [preprocessor](https://github.com/KenticoDocs/kontent-docs-reference-preprocessor) such as `https://<StorageAccountName>.blob.core.windows.net/<ReferenceDataContainerName/<ApiName>`.
+  * In the input parameters of the getBlobFromStorage function, use your own variable for `url` instead of `event.data.url`. Your URL must lead to an output JSON file from the [preprocessor](https://github.com/Kontent-ai-Learn/kontent-ai-learn-reference-preprocessor) such as `https://<StorageAccountName>.blob.core.windows.net/<ReferenceDataContainerName/<ApiName>`.
 * In `.\kcd-open-api-processor\function.json`, replace the existing `eventGridTrigger` binding with an [`httpTrigger`](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=csharp#customize-the-http-endpoint) so that the Azure Function responds to GET requests instead of eventGrid events.
 
 Example `httpTrigger` binding.
@@ -84,6 +84,6 @@ The function will output two files (HTML + OAS JSON) in two remote locations, wh
 
 Feel free to open a new issue where you describe your proposed changes, or even create a new pull request from your branch with proposed changes.
 
-## Licence
+## License
 
-The source codes is published under MIT licence.
+The source codes is published under MIT license.
